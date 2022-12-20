@@ -6,10 +6,7 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import { Typography } from '@mui/material';
 import { useState, useEffect } from "react";
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import FlashOnIcon from '@mui/icons-material/FlashOn';
+import QuestionCard from '../components/QuestionCard'
 
 const Questions = () => {
 
@@ -82,53 +79,8 @@ const Questions = () => {
                         ...to become one of us.
                     </Typography>}
 
-                    {card && <Box
-
-                        className='question-card h-60 hover:scale-105 hover:shadow-2xl duration-300 w-1/2'>
-
-                        <Card elevation={8} className='h-60' style={{ background: 'radial-gradient(#1fe4f5, #3fbafe)' }}>
-                            <CardContent>
-                                <div className='scale-200 -translate-x-72 translate-y-4' >
-                                    <FlashOnIcon />
-                                </div>
-
-                                <Typography variant="h5" component="div">
-                                    benevolent
-                                </Typography>
-                                <br />
-
-                                <Typography variant="body2">
-                                    well meaning and kindly.
-                                    <br />
-                                    {'"a benevolent smile"'}
-                                </Typography>
-                            </CardContent>
-                            <CardActions className='flex space-x-64 justify-center'>
-                                
-                            <Button size="small">
-                                    <p class="card__apply">
-                                        <a class="card__link" href="#">YEP! THAT IS ME!<i class="fas fa-arrow-right"></i></a>
-                                    </p>
-                                </Button>
-
-                                <Button size="small">
-                                    <p class="card__apply">
-                                        <a class="card__link" href="#">I HAVE NO IDEA!<i class="fas fa-arrow-right"></i></a>
-                                    </p>
-                                </Button>
-                                
-                                <Button size="small">
-                                    <p class="card__apply">
-                                        <a class="card__link" href="#">NAH, THAT CAN'T BE ME!<i class="fas fa-arrow-right"></i></a>
-                                    </p>
-                                </Button>
-
-                            </CardActions>
-                        </Card>
-
-                    </Box>
-
-
+                    {card && <QuestionCard/>
+                    
                     }
 
                 </Stack>

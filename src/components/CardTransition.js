@@ -1,7 +1,7 @@
-import "./styles.css";
+
 import { useRef, useState } from "react";
 
-export default function CardTransition() {
+const CardTransition = ()=> {
   const cardRef = useRef();
   const [cardData, setCardData] = useState(1);
   
@@ -34,3 +34,5 @@ export default function CardTransition() {
     </div>
   );
 }
+
+export default CardTransition;
