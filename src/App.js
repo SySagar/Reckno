@@ -5,6 +5,7 @@ import Home from './Sections/Home';
 import About from './Sections/About';
 import Profile from './Sections/Profile';
 import Questions from './Sections/Question';
+import ChatRoom  from './Sections/ChatRoom'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Route path="/About" element={<About/>} />
       <Route path="/Profile" element={<Profile/>} />
       <Route path="/Questions" element={<Questions/>} />
+      <Route path="/ChatRoom" element={<ChatRoom/>} />
       </Routes>
 
     </div>
