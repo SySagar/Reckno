@@ -36,6 +36,18 @@ const Home = () => {
     // })
 
     //   });
+
+    const openGithub = ()=>{
+        window.open("https://github.com/SySagar", "_blank")   
+    }
+
+    const openTwitter = ()=>{
+        window.open("https://twitter.com/SySagar2", "_blank")   
+    }
+
+    const openInstagram = ()=>{
+        window.open("https://www.instagram.com/lecifier", "_blank")   
+    }
     
 
     return (
@@ -164,15 +176,15 @@ const Home = () => {
 
                     <ul class="wrapper">
                        
-                        <li class="icon twitter">
-                            <span class="tooltip">Twitter</span>
-                            <span><i class="fab fa-twitter"><TwitterIcon></TwitterIcon></i></span>
+                        <li onClick={openTwitter} class="icon twitter">
+                            <span  class="tooltip">Twitter</span>
+                            <span><i  class="fab fa-twitter"><TwitterIcon></TwitterIcon></i></span>
                         </li>
-                        <li class="icon instagram">
+                        <li onClick={openInstagram}  class="icon instagram">
                             <span class="tooltip">Instagram</span>
                             <span><i class="fab fa-instagram"><InstagramIcon></InstagramIcon></i></span>
                         </li>
-                        <li class="icon github">
+                        <li onClick={openGithub}  class="icon github">
                             <span class="tooltip">Github</span>
                             <span><i class="fab fa-github"><GitHubIcon/></i></span>
                         </li>

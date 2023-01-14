@@ -11,40 +11,43 @@ import QuestionCard from '../components/QuestionCard'
 const Questions = () => {
 
     const [counter, setCounter] = useState(0)
-    const [showHideDemo2, setShowHideDemo2] = useState(true)
-    const [showHideDemo3, setShowHideDemo3] = useState(true)
-    const [showHideDemo1, setShowHideDemo1] = useState(true)
+    const [showHideDemo2, setShowHideDemo2] = useState(false)
+    const [showHideDemo3, setShowHideDemo3] = useState(false)
+    const [showHideDemo1, setShowHideDemo1] = useState(false)
 
-    const [show,setShow] = useState(true)
+    const [show,setShow] = useState(false)
 
     const [card, showCard] = useState(false)
-    // setTimeout(() => {
+    setTimeout(() => {
 
-    //                setCounter(counter+1);
-    //            }, 3000);
-    //            console.log(counter);
+                    if(counter==3)
+                    setShow(!show);
 
-    //            useEffect(() => {
-    //             switch (counter) {
-    //                 case 1:
-    //                   setShowHideDemo1(true)
-    //                   setShowHideDemo2(false)
-    //                   setShowHideDemo3(false)
-    //                   break;
-    //                 case 2:
-    //                     setShowHideDemo2(true)
-    //                     setShowHideDemo1(false)
-    //                     setShowHideDemo3(false)
-    //                   break;
-    //                 case 3:
-    //                     setShowHideDemo3(true)
-    //                     setShowHideDemo2(false)
-    //                     setShowHideDemo1(false)
-    //                   break;
-    //                 default:
+                   setCounter(counter+1);
+               }, 4000);
+               console.log(counter);
 
-    //               }
-    //           });
+               useEffect(() => {
+                switch (counter) {
+                    case 1:
+                      setShowHideDemo1(true)
+                      setShowHideDemo2(false)
+                      setShowHideDemo3(false)
+                      break;
+                    case 2:
+                        setShowHideDemo2(true)
+                        setShowHideDemo1(false)
+                        setShowHideDemo3(false)
+                      break;
+                    case 3:
+                        setShowHideDemo3(true)
+                        setShowHideDemo2(false)
+                        setShowHideDemo1(false)
+                      break;
+                    default:
+
+                  }
+              });
 
 
 
@@ -73,15 +76,18 @@ const Questions = () => {
                         Are you ready to know yourself ?
                     </Typography>}
 
-                    {showHideDemo1 && <Typography variant='h2' className='typing-demo font-Roboto font-bold'>
+                    {showHideDemo2 && <Typography variant='h2' className='typing-demo font-Roboto font-bold'>
                         ...to know your spirit animal ?
                     </Typography>}
 
-                    {showHideDemo1 && <Typography variant='h2' className='typing-demo font-Roboto font-bold'>
+                    {showHideDemo3 && <Typography variant='h2' className='typing-demo font-Roboto font-bold'>
                         ...to become one of us.
                     </Typography>}
 
-                    {card && <QuestionCard/>
+                    {
+                    
+                    
+                    card && <QuestionCard/>
                     
                     }
 
