@@ -91,7 +91,7 @@ export default function BaseBox() {
             alignItems={'self-start'}
             color={'#101010'}
             sx={{ fontWeight: 1000, fontSize: 30, alignContent: 'start' , textDecoration:'underline'}}>
-            The Chat Sauce
+            Whooby
           </Typography>
         </Stack>
 

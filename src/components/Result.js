@@ -40,7 +40,7 @@ export default function Result(roomName) {
           <div onClick={toggleModal} className="overlay"></div>
           <div className="modal-content">
           <Typography variant='h3' className='font-Roboto font-bold'>
-                        Congratulation!! You are now a member of 
+                        Congratulation!! You are now a member... 
                     </Typography>
             <div id="congo"  style={{ width: 400, height: 400 }}/>
             

@@ -56,7 +56,7 @@ const QuestionCard = () => {
 
         setComplete(complete+1)
 
-        if(complete===4)
+        if(complete===15)
         {setDone(false) 
         }
     };
