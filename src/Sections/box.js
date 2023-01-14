@@ -1,11 +1,12 @@
 import * as React from 'react';
+import axios from 'axios';
 import { Box, Divider, Stack } from '@mui/material';
 import { Typography } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
 import { useState } from 'react';
 import GoogleIcon from '@mui/icons-material/Google';
-import AppleIcon from '@mui/icons-material/Apple';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
@@ -20,6 +21,42 @@ export default function BaseBox() {
     },
   };
 
+
+  const NormalAuth = ()=>
+  {
+    
+    axios.get('https://reckno-authentication.onrender.com/dataset/', {
+      
+    })
+    .then(function (response) {
+
+      if(response===404)
+      {
+        //no user
+      }
+      else
+      console.log(response);
+    })
+  
+
+  }
+
+  const GoogleAuth = ()=>
+  {
+    window.open("https://reckno-authentication.onrender.com/auth/google/", "_blank")
+  //   axios.get('https://reckno-authentication.onrender.com/auth/google/', {
+      
+  //   })
+  //   .then(function (response) {
+  //     console.log(response);
+  //   })
+    }
+
+  
+  const GithubAuth = ()=>
+  {
+    window.open("https://reckno-authentication.onrender.com/auth/github/", "_blank")
+  }
 
   const navigate = useNavigate();
 
@@ -169,7 +206,7 @@ paddingTop="84px">
       justifyContent='center'
       gap='8px'>
      <Button
-     
+     onClick={GoogleAuth}
      variant="outlined" 
      startIcon={<GoogleIcon style={{ color: "black" }}/>}
      sx={{ borderColor:'#e6e6e6' , borderRadius:2 , height:40, width: 105 , fontSize:10 , fontWeight: 900}}>
@@ -177,10 +214,11 @@ paddingTop="84px">
       </Button>
 
       <Button
+      onClick={GithubAuth}
        variant="outlined" 
-       startIcon={<AppleIcon style={{ color: "black" }}/>}
+       startIcon={<GitHubIcon style={{ color: "black" }}/>}
        sx={{borderColor:'#e6e6e6' , borderRadius:2 , height:40, width: 105,  fontSize:10 , fontWeight: 900}}>
-        Apple
+        Github
       </Button>
 
       <Button

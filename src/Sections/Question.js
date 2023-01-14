@@ -15,6 +15,8 @@ const Questions = () => {
     const [showHideDemo3, setShowHideDemo3] = useState(true)
     const [showHideDemo1, setShowHideDemo1] = useState(true)
 
+    const [show,setShow] = useState(true)
+
     const [card, showCard] = useState(false)
     // setTimeout(() => {
 
@@ -87,13 +89,13 @@ const Questions = () => {
 
                 <br />
 
-                <Button
+                {show && <Button
                     variant="contained"
                     endIcon={<ArrowForwardIosIcon />}
-                    onClick={() => { showCard(true); setShowHideDemo1(false); setShowHideDemo2(false); setShowHideDemo3(false) }}>
+                    onClick={() => { showCard(true); setShowHideDemo1(false); setShowHideDemo2(false); setShowHideDemo3(false); setShow(!show);}}>
                     Begin
                 </Button>
-
+}
             </Box>
         </div>
     );

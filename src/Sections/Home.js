@@ -1,5 +1,7 @@
 import * as React from 'react';
 import '../App.css';
+import axios from 'axios';
+import { useState, useEffect } from "react";
 import { Box } from '@mui/material'
 import LogoutIcon from '@mui/icons-material/Logout';
 import Button from '@mui/material/Button';
@@ -16,6 +18,26 @@ import Group from './Group'
 import Question from './Question'
 
 const Home = () => {
+
+    // useEffect(() => {
+       
+
+    //  axios.get('https://reckno-authentication.onrender.com/dataset/', {
+      
+    // })
+    // .then(function (response) {
+
+    //   if(response===404)
+    //   {
+    //     //no user
+    //   }
+    //   else
+    //   console.log(response);
+    // })
+
+    //   });
+    
+
     return (
         <div className='home'>
             <Box

@@ -331,3 +331,64 @@ html{
   width: 100%;
 }
 
+
+/*This is for overlay result*/
+
+
+.btn-modal {
+  background-color: #000000;
+   margin-left: 1150px;
+   margin-bottom: 50px;
+   font-size: 12px;
+ }
+ 
+ .modal, .overlay {
+   width: 100vw;
+   height: 100vh;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   position: fixed;
+   z-index: 6;
+ }
+ 
+ .overlay {
+   background: rgba(49,49,49,0.8);
+   z-index: 6;
+ }
+ .modal-content {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   line-height: 1.4;
+   padding: 14px 28px;
+   border-radius: 3px;
+   max-width: 600px;
+   min-width: 300px;
+   z-index: 6;
+ }
+ 
+ .close-modal {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   padding: 5px 7px;
+ }
+ 
+/*This section is for profile*/
+.glassmorph{
+background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.profile-image{
+  position: absolute;
+  border-radius: 50%;
+  background-color: #333333;
+}
