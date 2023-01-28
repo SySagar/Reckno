@@ -16,6 +16,7 @@ import {Link} from 'react-router-dom';
 import About from './About'
 import Group from './Group'
 import Question from './Question'
+// import username from './box'
 
 const Home = () => {
 
@@ -54,8 +55,8 @@ const Home = () => {
     }
 
     const logout = ()=>{
-
-         axios.get('https://reckno-authentication.onrender.com/logout/', {
+        console.log("logging out")
+         axios.post('https://reckno-authentication.onrender.com/logout', {
       
     })
     .then(function (response) {
