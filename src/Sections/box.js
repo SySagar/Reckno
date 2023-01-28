@@ -71,7 +71,7 @@ export default function BaseBox() {
   const [showPassword, setShowPassword] = useState(false);
 
   const signup = ()=>{
-    <Signup/>
+    Signup()
   }
 
   return (
