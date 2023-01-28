@@ -17,8 +17,7 @@ const Group = () => {
 
                 <Stack
                     
-                    width={'100%'}
-                    direction={'row'}>
+                    width={'100%'} className='group-card'>
 
 
                     <Box>

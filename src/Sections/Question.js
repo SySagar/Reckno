@@ -72,15 +72,15 @@ const Questions = () => {
                     height='100%'
                     alignItems="center">
 
-                    {showHideDemo1 && <Typography variant='h2' className='typing-demo font-Roboto font-bold'>
+                    {showHideDemo1 && <Typography variant='h2' className='typing-demo font-Roboto font-bold ques-text'>
                         Are you ready to know yourself ?
                     </Typography>}
 
-                    {showHideDemo2 && <Typography variant='h2' className='typing-demo font-Roboto font-bold'>
+                    {showHideDemo2 && <Typography variant='h2' className='typing-demo font-Roboto font-bold ques-text'>
                         ...to know your spirit animal ?
                     </Typography>}
 
-                    {showHideDemo3 && <Typography variant='h2' className='typing-demo font-Roboto font-bold'>
+                    {showHideDemo3 && <Typography variant='h2' className='typing-demo font-Roboto font-bold ques-text'>
                         ...to become one of us.
                     </Typography>}
 

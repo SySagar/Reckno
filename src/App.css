@@ -12,6 +12,14 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+@media screen and (max-width:1200px) {
+  .girl,.right{
+    display: none;
+  }
+} 
+.home{
+  overflow-x: hidden;
+}
 
 .App-header {
   background-color: #282c34;
@@ -113,14 +121,66 @@ html{
   opacity: 1;
 }
 
+.ham{
+  color: #8585ad;
+  text-align: left;
+}
+@media screen and (max-width:1200px) {
+  .navMenu{
+    display: none;
+  }
+} 
+.hero-content{
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 50px;
+  flex-wrap: wrap;
+}
+
+.community{
+  padding: 0 80px;
+}
+@media screen and (min-width:578px) {
+  .hero-text{
+    max-width: 680px;
+  }
+} 
+@media screen and (max-width:578px) {
+  .hero-text{
+   min-width: 80px;
+  }
+} 
+
+/* @media screen and (max-width:578px) {
+  .hero-text{
+    max-width: 400px;
+  }
+}  */
+
+/* 
+@media screen and (max-width:895px) {
+  .home-img{
+    display: none;
+  }
+}  */
+
+
 /*This below css is for cards for the community*/
+
+.group-card{
+  display: flex;
+  justify-content: center;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+}
+
 .container {
-  position : relative;
-  width : 370px;
+  /* position : relative; */
+  width : 340px;
   display : flex;
   align-items : center;
   justify-content : center;
-  flex-warp : warp;
+  flex-wrap: wrap;
   padding : 30px;  
 }
 
@@ -191,6 +251,24 @@ html{
   font-size: 2em;
 }
 
+@media screen and (max-width:980px) {
+  .typing-demo {
+    font-size: 2em !important;
+  }
+} 
+
+@media screen and (max-width:498px) {
+  .typing-demo {
+    font-size: 1.5em !important;
+  }
+} 
+
+@media screen and (max-width:374px) {
+  .typing-demo {
+    font-size: 1.1em !important;
+  }
+} 
+
 @keyframes typing {
   from {
     width: 0
@@ -202,7 +280,15 @@ html{
     border-color: transparent
   }
 }
-
+.ques-cards{
+  height: 250px;
+  margin: 0px 20px;
+}
+ @media screen and (max-width:437px) {
+  .ques-cards{
+    height: 288px;
+  }
+}
 
 /*This is for bottom footer design*/
 
@@ -214,8 +300,9 @@ html{
 
 
 .wrapper {
-  display: inline-flex;
+  display:flex;
   list-style: none;
+  justify-content: center;
 }
 
 .wrapper .icon {
@@ -311,9 +398,11 @@ html{
 
 
 /*card button*/
-.card__apply {
-  grid-row: 4/5;
-  align-self: center;
+/* .card__apply {
+  
+} */
+.ques-button{
+  justify-content: space-between !important;
 }
 
 .card__link::after {
@@ -392,3 +481,26 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   border-radius: 50%;
   background-color: #333333;
 }
+
+/* about */
+.About{
+  display: flex;
+  justify-content: center;
+}
+.about-box{
+  padding: 50px;
+  margin: 120px 130px;
+}
+@media screen and (max-width:1050px) {
+  .about-box{
+    margin: 120px 70px;
+  }
+} 
+.about-text{
+  font-size: 25px !important;
+  margin: 60px 0 !important;
+}
+
+/* ques */
+/* .ques-text{margin: 10px 30px !important;
+} */

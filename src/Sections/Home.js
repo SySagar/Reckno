@@ -37,6 +37,10 @@ const Home = () => {
 
     //   });
 
+   
+        //checkStatus()
+    
+
     const openGithub = ()=>{
         window.open("https://github.com/SySagar", "_blank")   
     }
@@ -47,6 +51,33 @@ const Home = () => {
 
     const openInstagram = ()=>{
         window.open("https://www.instagram.com/lecifier", "_blank")   
+    }
+
+    const logout = ()=>{
+
+         axios.get('https://reckno-authentication.onrender.com/logout/', {
+      
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+
+    }
+
+    const [group,setGroup] = useState(false)
+    const checkStatus = ()=>{
+
+
+        axios.get('https://reckno-authentication.onrender.com/dataset/', {
+      
+    })
+    .then(function (response) {
+      console.log(response+"hm");
+
+      if(response!=null)
+      setGroup(true)
+    })
+
     }
     
 
@@ -84,6 +115,7 @@ const Home = () => {
 
                     <Button className='m-8'
                         variant="contained"
+                        onClick={logout}
                         startIcon={<LogoutIcon />}
                     >
                         Log Out
@@ -159,9 +191,23 @@ const Home = () => {
 
                 <br /><br />
 
-                <div id={'Questions'}>
+                {group &&   <div id={'Questions'}>
                 <Question/>
                 </div>
+                }
+
+                {!group && 
+                
+                <Typography
+                maxWidth={300}
+                fontSize={45}
+                
+                sx={{ fontWeight: 'light', pl: 6, pt: 1 }}>
+                You already have a group!!
+              </Typography>
+                
+                }
+              
 
                 <br /><br />
 

@@ -62,15 +62,15 @@ const QuestionCard = () => {
     };
 
     return (
-        <div className='flex justify-center'>
+        <div className='flex justify-center ques-set'>
 
         {done && 
 
             
             <Box
-                className='question-card h-60  w-{180} pl-10 hover:scale-105 hover:shadow-2xl duration-300'>
+                className='question-card hover:scale-105 hover:shadow-2xl duration-300'>
 
-                <Card ref={cardRef} elevation={8} className='h-60' style={{
+                <Card ref={cardRef} elevation={8} className='ques-cards' style={{
                     background: 'radial-gradient(#1fe4f5, #3fbafe)',
                     padding: "8px",
                     transition: "opacity 1s linear"
@@ -106,9 +106,9 @@ const QuestionCard = () => {
 
                                     </CardContent>
 
-                                    <CardActions className='flex space-x-52 justify-center mt-10'>
+                                    <CardActions className='flex justify-center mt-10 ques-button ques-button'>
 
-                                        <Button size="small" onClick={() => {
+                                        <Button size='large' onClick={() => {
 
                                            
                                             if(data.answers[0].type==='Dragon')
