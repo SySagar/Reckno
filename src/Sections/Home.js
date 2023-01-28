@@ -56,7 +56,7 @@ const Home = () => {
 
     const logout = ()=>{
         console.log("logging out")
-         axios.post('https://reckno-authentication.onrender.com/logout', {
+         axios.get('https://reckno-authentication.onrender.com/logout', {
       
     })
     .then(function (response) {
