@@ -11,6 +11,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useNavigate } from 'react-router-dom';
+import Signup from './Signup';
 
 export default function BaseBox() {
 
@@ -35,6 +36,8 @@ export default function BaseBox() {
     })
     .then(function (response) {
       console.log(response);
+
+      
     })
     .catch(function (error) {
       console.log(error);
@@ -67,7 +70,9 @@ export default function BaseBox() {
 
   const [showPassword, setShowPassword] = useState(false);
 
-
+  const signup = ()=>{
+    <Signup/>
+  }
 
   return (
 
@@ -179,7 +184,7 @@ export default function BaseBox() {
           <br />
           <Button
             variant="contained"
-            onClick={navigateHome}
+            onClick={NormalAuth}
             sx={{ m: 3, backgroundColor: '#fdc886', width: 300, height: 40, boxSX }}
           >
             <Typography
@@ -233,6 +238,7 @@ export default function BaseBox() {
           </Stack>
 
           <Typography
+          onClick={signup} 
             color={'#101010'}
             sx={{ fontWeight: 50, fontSize: 10, mt: 2 }}>
             Don't have and account? <span style={{ fontWeight: 'bold' }}>Signup</span>
