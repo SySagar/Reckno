@@ -1,6 +1,7 @@
-import * as React from 'react';
+import * as React  from 'react';
 import '../App.css';
 import axios from 'axios';
+import { useEffect} from "react";
 import { Box } from '@mui/material'
 import Button from '@mui/material/Button';
 import { Typography } from '@mui/material';
@@ -29,21 +30,7 @@ const QuestionCard = () => {
 
     const [roomname, setRoom] = useState(null);
 
-    const setGroup = ()=>{
 
-            console.log(roomname);
-        axios.post('https://reckno-authentication.onrender.com/group', {
-            userName: 'Fred',
-            group: roomname
-          })
-          .then(function (response) {
-            // console.log(response);
-          })
-          .catch(function (error) {
-            // console.log(error);
-          });
-
-    }
 
     const next = () => {
         cardRef.current.style.opacity = 0;
@@ -56,10 +43,36 @@ const QuestionCard = () => {
 
         setComplete(complete+1)
 
-        if(complete===15)
+        if(complete===5)
         {setDone(false) 
+            /*console.log(group);*/
         }
     };
+
+    useEffect(() => {
+        
+        var max = dragon;
+        var roomName;
+
+        if(Basilisk>=max)
+        {max=Basilisk;roomName="Basilisk";}
+        
+        if(dragon>=max)
+        {max=dragon;roomName="Dragon";}
+        
+        if(Werewolf>=max)
+        {max=Werewolf;roomName="Werewolf";}
+        
+        if(Phoenix>=max)
+        {max=Phoenix;roomName="Phoenix"}
+
+            setRoom(roomName)
+            console.log(roomname+"hh")
+            
+localStorage.setItem('group', roomname)
+
+    }
+    )
 
     return (
         <div className='flex justify-center ques-set'>
@@ -181,6 +194,8 @@ const QuestionCard = () => {
             </Box>
 
          }
+
+
             {
                 !done &&  <div className="proceed">
                     
@@ -189,25 +204,9 @@ const QuestionCard = () => {
                     variant="contained"
                     
                     onClick={() => { 
-                        var max = dragon;
-                        var roomName;
-
-                        if(Basilisk>=max)
-                        {max=Basilisk;roomName="Basilisk";}
-                        
-                        if(dragon>=max)
-                        {max=dragon;roomName="Dragon";}
-                        
-                        if(Werewolf>=max)
-                        {max=Werewolf;roomName="Werewolf";}
-                        
-                        if(Phoenix>=max)
-                        {max=Phoenix;roomName="Phoenix"}
-
-                            setRoom(roomName)
-                            console.log(roomname)
-                        window.open("https://reckno-backend.onrender.com/chat.html?username=SySagar&room="+roomName, "_blank")
-                        setGroup()
+                      
+                        window.open("https://reckno-backend.onrender.com/chat.html?username=SySagar&room="+roomname, "_blank")
+                       
                     }}>
                     Go to your chat room!!!
                 </Button>

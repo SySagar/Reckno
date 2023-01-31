@@ -18,6 +18,7 @@ const Questions = () => {
     const [show,setShow] = useState(false)
 
     const [card, showCard] = useState(false)
+    useEffect(() => {
     setTimeout(() => {
 
                     if(counter==3)
@@ -25,7 +26,7 @@ const Questions = () => {
 
                    setCounter(counter+1);
                }, 4000);
-               console.log(counter);
+            })
 
                useEffect(() => {
                 switch (counter) {

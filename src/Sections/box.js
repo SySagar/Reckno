@@ -212,12 +212,13 @@ export default function BaseBox() {
           <Stack
             direction='row'
             justifyContent='center'
-            gap='8px'>
+            margin={'10px'}
+            gap='28px'>
             <Button
               onClick={GoogleAuth}
               variant="outlined"
               startIcon={<GoogleIcon style={{ color: "black" }} />}
-              sx={{ borderColor: '#e6e6e6', borderRadius: 2, height: 40, width: 105, fontSize: 10, fontWeight: 900 }}>
+              sx={{ borderColor: '#e6e6e6', borderRadius: 2, height: 40, width: 155, fontSize: 10, fontWeight: 900 }}>
               Google
             </Button>
 
@@ -225,16 +226,11 @@ export default function BaseBox() {
               onClick={GithubAuth}
               variant="outlined"
               startIcon={<GitHubIcon style={{ color: "black" }} />}
-              sx={{ borderColor: '#e6e6e6', borderRadius: 2, height: 40, width: 105, fontSize: 10, fontWeight: 900 }}>
+              sx={{ borderColor: '#e6e6e6', borderRadius: 2, height: 40, width: 155, fontSize: 10, fontWeight: 900 }}>
               Github
             </Button>
 
-            <Button
-              variant="outlined"
-              startIcon={<FacebookIcon style={{ color: "black" }} />}
-              sx={{ borderColor: '#e6e6e6', borderRadius: 2, height: 40, width: 105, fontSize: 10, fontWeight: 900 }}>
-              Facebook
-            </Button>
+        
           </Stack>
 
           <Typography
